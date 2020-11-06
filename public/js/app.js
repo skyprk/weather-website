@@ -16,8 +16,8 @@ weatherForm.addEventListener('submit', (e) => {
       if (data.error) {
         messageOne.textContent = data.error;
       } else {
-        messageOne.textContent = data.location;
-        messageTwo.textContent = 'Forecast not working';
+        messageOne.textContent = '[Location - mapbox.com] ' + data.location;
+        messageTwo.textContent = '[Forecast - darksky.net] ' + data.forecast;
       }
     });
   });
